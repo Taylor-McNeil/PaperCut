@@ -1,9 +1,7 @@
-
 var papercutInstance;
 var DeployedAddress;
 var theEvent;
 var test;
-var ticketSaleInstance;
 
 App = {
   web3Provider: null,
@@ -67,11 +65,11 @@ App = {
 
     App.contracts.Factory.deployed().then(function(instance){
       papercutInstance = instance;
-     //test = web3.eth.contract(instance);
+     test = web3.eth.contract(instance);
 
     }).then(function(eventName) {
       console.log(papercutInstance);
-
+      console.log(test);
     })
   },
 
@@ -82,7 +80,7 @@ App = {
 
 
 
-   addEvent: async function() {
+ addEvent: async function() {
 
     var eventNameId= document.getElementById("eventName").value;
     var dateId= parseInt(document.getElementById("eventDate").value);
@@ -90,9 +88,9 @@ App = {
     var eventTimeEnd= parseInt(document.getElementById("eventTimeEnd").value);
 
 
-papercutInstance.newTicketSale(eventNameId,dateId,eventTimeId,eventTimeEnd,{from:App.acc});
-DeployedAddress= await papercutInstance.test();
 
+papercutInstance.newTicketSale(eventNameId,dateId,eventTimeId,eventTimeEnd,{from:App.acc});
+DeployedAddress = await papercutInstance.test();
 
 
 //console.log(ticketSale);
@@ -104,75 +102,29 @@ console.log(DeployedAddress);
 
 createTickets: function(){
 
-var abi = [
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "eventName",
-                "type": "string"
-            },
-            {
-                "name": "eventDate",
-                "type": "uint256"
-            },
-            {
-                "name": "startTime",
-                "type": "uint256"
-            },
-            {
-                "name": "endTime",
-                "type": "uint256"
-            }
-        ],
-        "name": "newTicketSale",
-        "outputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "test",
-        "outputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    }
-]
-
   var _ticketName= document.getElementById("ticketName").value;
   var _numofTickets = parseInt(document.getElementById("numOfTickets").value);
   var cost = parseInt(document.getElementById("ticketCost").value);
 
-/*  ticketSaleInstance=web3.eth.contracts(ticketSale).at(DeployedAddress);
-  console.log(ticketSaleInstance);*/
-
-test = web3.eth.contract(abi);
-ticketSaleInstance= test.at(DeployedAddress);
-console.log(ticketSaleInstance.name);
-
-
-
-
 //theEvent.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});}
-//theEvent.then(function(instance){return instance.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});})
+/*theEvent.then(function(instance){return instance.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});})*/
 
 //console.log(DeployedAddress.cost);
-return }
-};
+ },
 
+purchaseTickets: function(){
+var artistChoice = document.getElementById("artistName").value;
+var __numofTickets = document.getElementById('numTickets').value;
+var __tickettype = document.getElementById('typeOfTickets').value;
+
+console.log(artistChoice);
+console.log(__numofTickets);
+console.log(__tickettype);
+console.log(typeof(__tickettype));
+console.log(typeof(__numofTickets));
+}
+
+};
 $(function() {
   $(window).load(function() {
     App.init();
