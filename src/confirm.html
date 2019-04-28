@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>ticketNeeds Got You</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        #toolBar {
+            text-align: right;
+            height: 50px;
+            width: 100%;
+        }
+        #menu {
+            padding-left: 10px;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #main {
+            padding-top: 10%;
+        }
+        h2 {
+            color: red;
+        }
+        #btn {
+            background-color: white;
+            border: none;
+            color: red;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <script src="middleLayer.js">
+
+    </script>
+    <div id="frame">
+        <div id="toolBar">
+            <button id="menu" onclick=window.open("index.html","_self") title="Home page">HOME</button>
+            <button id="menu" onclick=window.open("about.html","_self") title="Information about ticketNeeds project and goals">ABOUT</button>
+            <button id="menu" onclick=window.open("team.html","_self") title="Meet the team to built this project">TEAM</button>
+        </div>
+        <div id="confirmInfo">
+
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

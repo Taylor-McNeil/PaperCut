@@ -1,0 +1,82 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+        #toolBar {
+            text-align: right;
+            height: 50px;
+
+            width: 100%;
+        }
+        #menu {
+            padding-left: 10px;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #head {
+          color: white;
+            background-color: black;
+            text-align: center;
+        }
+        #btn {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #btn2 {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #buyFrom {
+            padding-top: 10px;
+            color: white;
+            overflow: auto;
+            height: 85%;
+            width: 100%;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+  <script src="middleLayer.js"></script>
+        <div id="frame">
+        <div id="toolBar">
+            <button id="menu" onclick=window.open("index.html","_self")>HOME</button>
+            <button id="menu" onclick=window.open("about.html","_self")>ABOUT</button>
+            <button id="menu" onclick=window.open("team.html","_self")>TEAM</button>
+        </div>
+
+        <div id="head">
+            <h1>Buying From Artist</h1>
+        </div>
+        <div id="buyFrom"></div>
+        
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

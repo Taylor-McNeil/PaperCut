@@ -1,0 +1,125 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+        #toolBar {
+            text-align: right;
+            height: 50px;
+
+            width: 100%;
+        }
+        #menu {
+            padding-left: 10px;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #top {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+        }
+        #who {
+            text-align: center;
+        }
+        #person {
+            overflow: visible;
+            height: 200px;
+            width: 450px;
+        }
+        #icon {
+            float: left;
+        }
+        #info {
+            float: right;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="frame">
+        <div id="toolBar">
+            <button id="menu" onclick=window.open("index.html","_self")>HOME</button>
+            <button id="menu" onclick=window.open("about.html","_self")>ABOUT</button>
+            <button id="menu" onclick=window.open("team.html","_self")>TEAM</button>
+        </div>
+
+        <div id="top">
+        The Team
+            <br><br>
+        </div>
+
+        <div id="who">
+            <center>
+            <div id="person">
+                <div id="icon">
+                <img src="personIcon.png" height="100%" width="">
+                </div>
+                <div id="info">
+                    <h2>Taylor McNeely</h2>
+                    <h3><em>Georgia State University</em><br>College of Arts and Sciences<br>Atlanta, USA</h3>
+                    <h4>tmcneil3@student.gsu.edu</h4>
+                </div>
+            </div>
+                <br><br>
+            <div id="person">
+                <div id="icon">
+                <img src="personIcon.png" height="100%" width="">
+                </div>
+                <div id="info">
+                    <h2>Gregory Woodcox</h2>
+                    <h3><em>Georgia State University</em><br>College of Arts and Sciences<br>Atlanta, USA</h3>
+                    <h4>gwoodcox1@student.gsu.edu</h4>
+                </div>
+            </div>
+                <br><br>
+            <div id="person">
+                <div id="icon">
+                <img src="personIcon.png" height="100%" width="">
+                </div>
+                <div id="info">
+                    <h2>Anthony Davis</h2>
+                    <h3><em>Georgia State University</em><br>College of Arts and Sciences<br>Atlanta, USA</h3>
+                    <h4>adavis183@student.gsu.edu</h4>
+                </div>
+            </div>
+                <br><br>
+            <div id="person">
+                <div id="icon">
+                <img src="personIcon.png" height="100%" width="">
+                </div>
+                <div id="info">
+                    <h2>Jordan Jones</h2>
+                    <h3><em>Georgia State University</em><br>College of Arts and Sciences<br>Atlanta, USA</h3>
+                    <h4>jjones410@student.gsu.edu</h4>
+                </div>
+            </div>
+                <br><br>
+            <div id="person">
+                <div id="icon">
+                <img src="personIcon.png" height="100%" width="">
+                </div>
+                <div id="info">
+                    <h2>Gavin Gniewek</h2>
+                    <h3><em>Georgia State University</em><br>College of Arts and Sciences<br>Atlanta, USA</h3>
+                    <h4>gavingniewek777@student.gsu.edu</h4>
+                </div>
+            </div>
+            </center>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

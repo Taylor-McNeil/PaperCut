@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+        #toolBar {
+            text-align: right;
+            height: 50px;
+
+            width: 100%;
+        }
+        #menu {
+            padding-left: 10px;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #frame {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="middleLayer.js"></script>
+    <div id="frame">
+        <div id="toolBar">
+            <button id="menu" onclick=window.open("index.html","_self")>HOME</button>
+            <button id="menu" onclick=window.open("about.html","_self")>ABOUT</button>
+            <button id="menu" onclick=window.open("team.html","_self")>TEAM</button>
+        </div>
+        <div id="top">
+          <h1>Create an Event</h1>
+      </div>
+      <div id="event">
+         <form onsubmit="App.addEvent();" id="eventInfo" action="tickets.html"  >
+              Event Name: <input type="text" id="eventName"/>
+             <br/>
+             <br/>
+            <!-- Date of Event (MM-DD-YYYY): <input type="numbers" pattern="(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])-[0-9]{4}" id="eventDate" form="eventInfo"/> -->
+            Date of Event(MMDDYYYY):<input type ="number" id="eventDate" />
+             <br/>
+             <br/>
+            <!-- Start Time (HH:MM): <input type="numbers" pattern="(0[1-9]|1[0-9]|2[0-3]):([0-5][0-9])" id="eventTime"/> -->
+            Start Time (HHMM): <input type ="number" id="eventTime" />
+             <br/>
+             <br/>
+             <!-- End Time (HH:MM): <input type="numbers" pattern="(0[1-9]|1[0-9]|2[0-3]):([0-5][0-9])" id="eventTimeEnd"/> -->
+             End Time (HHMM): <input type ="number" id="eventTimeEnd" />
+             <br/>
+             <br/>
+             <input type="submit" value = "Next">
+
+          </form>
+        </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/app.js"></script>
+</body>
+</html>
