@@ -1,4 +1,3 @@
-
 var papercutInstance;
 var DeployedAddress;
 var theEvent;
@@ -81,7 +80,7 @@ App = {
 
 
 
-   addEvent: async function() {
+ addEvent: async function() {
 
     var eventNameId= document.getElementById("eventName").value;
     var dateId= parseInt(document.getElementById("eventDate").value);
@@ -90,12 +89,12 @@ App = {
 
 
 
-DeployedAddress= await papercutInstance.newTicketSale(eventNameId,dateId,eventTimeId,eventTimeEnd,{from:App.acc});
-
+papercutInstance.newTicketSale(eventNameId,dateId,eventTimeId,eventTimeEnd,{from:App.acc});
+DeployedAddress = await papercutInstance.test();
 
 
 //console.log(ticketSale);
-//console.log(DeployedAddress);
+console.log(DeployedAddress);
   },
 
 
@@ -103,20 +102,30 @@ DeployedAddress= await papercutInstance.newTicketSale(eventNameId,dateId,eventTi
 
 createTickets: function(){
 
-
   var _ticketName= document.getElementById("ticketName").value;
   var _numofTickets = parseInt(document.getElementById("numOfTickets").value);
   var cost = parseInt(document.getElementById("ticketCost").value);
 
 
-
 //theEvent.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});}
-theEvent.then(function(instance){return instance.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});})
+/*theEvent.then(function(instance){return instance.checkBeforeAddTicket(_ticketName,_numofTickets, cost,{from: App.acc});})*/
 
 //console.log(DeployedAddress.cost);
-return }
-};
+ },
 
+purchaseTickets: function(){
+var artistChoice = document.getElementById("artistName").value;
+var __numofTickets = document.getElementById('numTickets').value;
+var __tickettype = document.getElementById('typeOfTickets').value;
+
+console.log(artistChoice);
+console.log(__numofTickets);
+console.log(__tickettype);
+console.log(typeof(__tickettype));
+console.log(typeof(__numofTickets));
+}
+
+};
 $(function() {
   $(window).load(function() {
     App.init();

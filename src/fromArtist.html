@@ -66,15 +66,15 @@
             <button id="menu" onclick=window.open("about.html","_self")>ABOUT</button>
             <button id="menu" onclick=window.open("team.html","_self")>TEAM</button>
         </div>
-        <div id="options">
+       <!-- <div id="options">
             <button id="btn" onclick=window.open("fromArtist.html","_self")>Buy From Artist</button>
             <button id="btn2" onclick=window.open("","_self")>Buy From Other</button>
-        </div>
+        </div> -->
         <div id="buyFrom">
             <h1>Buying a Ticket from Artist</h1>
 
-            <form onsubmit="grabValues();" id="infomation">
-                Artist: <select id="artistName" form="infomation">
+            <form onsubmit="App.purchaseTickets();" id="infomation">
+                Artist: <select name="artistName" form="infomation">
                         <option value='nipsey'>Nipsey Hussle</option>
                         <option value='rihanna'>Rihanna</option>
                         <option value='drake'>Drake</option>
@@ -90,15 +90,23 @@
                 </select>
                 <br/>
                 <br/>
-                Quantity: <select id="numTickets" form="infomation">
-                            <option value='1'>One</option>
-                            <option value='2'>Two</option>
-                            <option value='3'>Three</option>
-                            <option value='4'>Four</option>
-                            <option value='5'>Five</option>
+                Quantity: <select name="numTickets" form="infomation">
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
                 </select>
                 <br/>
                 <br/>
+
+                Type: <select name = "typeOfTickets" fomr="infomation">
+                        <option value ='1'> Basic</option>
+                        <option value ='2'> premium</option>
+                    </select>
+                    <br/>
+                    <br/>
+
                 <input type="submit">
 
             </form>
