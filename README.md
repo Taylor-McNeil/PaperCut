@@ -23,9 +23,9 @@ In version 2.0, we hope to add EventOwner authentication and the selling functio
   <ul><li> Unzip the repository </li>
   <li> Navigate to the repository using cmd, Terminal or PowerShell </li> </ul>
   <li> Install the dependencies </li>
-      ```powershell
+      
       npm install
-      ```
+      
   <li> Compile the contract </li>
   
    
