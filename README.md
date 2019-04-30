@@ -87,7 +87,8 @@ The window may flash very quickly. If it does, you need to click on the fox icon
 <p> This dApp does have some errors within it. However, general functionality/proof of concept is there. The dApp can connect to the blockchain and perform transactions. More testing will be required to add final functionality to the dApp. </p>
 
 <h2> :video_camera: Demo </h2>
-<img src ="ezgif.com-gif-maker.gif" />
+
+<img src ="ezgif.com-gif-maker.gif"/>
 
 <h2> Contributors </h2>
 <p> These people contributed to the alpha version of PaperCut :ticket:
